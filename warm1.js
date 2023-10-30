@@ -6,6 +6,9 @@ const studentScores = [
     { name: 'Eve', score: 78 }
   ]
   
-  const getPassingNames = () => {}
+  const getPassingNames = (score) => {
+    const pass = score.filter(student => student.score > 80).map(student => student.name)
+    return pass
+  }
   const passingNames = getPassingNames(studentScores)
   console.log(passingNames)
